@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15"
+  },
+  "name": "apibooks",
+  "description": "��#\u0000 \u0000a\u0000p\u0000i\u0000b\u0000o\u0000o\u0000k\u0000s\u0000\r\u0000 \u0000",
+  "version": "1.0.0",
+  "main": "apirest.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s0je/apibooks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s0je/apibooks/issues"
+  },
+  "homepage": "https://github.com/s0je/apibooks#readme"
+}

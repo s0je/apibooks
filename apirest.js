@@ -87,12 +87,14 @@ app.get("/libros",
         function(request,response)
         {
             let id = request.query.id;
+            let idUser= request.query.id_usuario;
+            let params= []
             let sql;
 
             if(id)
             {
-                let sql = "SELECT * FROM libro WHERE id_libro = ?";
-                let params = [id];
+                let sql = "SELECT * FROM libro WHERE id_libro = ? AND id_usuario= ?";
+                params = [id, idUser];
                 connection.query(sql,params, function (err, result) 
                 {
                     if (err) 
@@ -106,8 +108,9 @@ app.get("/libros",
             }
             else
             {
-                sql = 'SELECT * FROM libro;';
-                connection.query(sql, function (err, result) 
+                sql = 'SELECT * FROM libro WHERE id_usuario= ?;';
+                params = [idUser]
+                connection.query(sql,params, function (err, result) 
                 {
                     if (err) 
                         console.log(err);
